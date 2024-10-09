@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSHS - Home</title>
+    <link rel="icon" type="image/webp" href="./public/icon.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Basic footer styling */
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer i {
+            margin-right: 5px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 20px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/cshs.sjajeju/" target="_blank"><i class="fab fa-instagram"></i> CSHS
+                Instagram</a>
+            <a href="https://github.com/SJA-CSHS" target="_blank"><i class="fab fa-github"></i> CSHS Github</a>
+        </div>
+    </footer>
+
+    <!-- MenuBar Loading Script -->
+    <script>
+        //load the menubar
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('menubar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                    //get the current page
+                    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+                    const links = document.querySelectorAll('nav ul li a');
+                    console.log(links);
+                    console.log(currentPage);
+                    links.forEach(link => {
+                        if (link.innerHTML.toLowerCase().includes(currentPage)) {
+                            console.log(link);
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading menu:', error));
+        });
+    </script>
+
+</body>
+
+</html>
