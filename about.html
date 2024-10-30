@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <!-- MenuBar Loading Script -->
+    <script>
+        //load the menubar
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('menubar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                    //get the current page
+                    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+                    const links = document.querySelectorAll('nav ul li a');
+                    console.log(links);
+                    console.log(currentPage);
+                    links.forEach(link => {
+                        if (link.innerHTML.toLowerCase().includes(currentPage)) {
+                            console.log(link);
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                })
+                .catch(error => console.error('Error loading menu:', error));
+        });
+    </script>
+</body>
+
+</html>
