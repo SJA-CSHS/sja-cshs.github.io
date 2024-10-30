@@ -7,36 +7,39 @@ body{
 }
 
 .header h1 {
-    font-size: 1.7em;
+    font-size: 5em;
+    font-family: "Times New Roman", Times, serif;
     text-align: center; 
     color: white;
+    position: relative;
+    top: 18px;
+    left: 10px;
 }
 
 .box-header{
-    
     padding: 20px;
     text-align: center;
-    border: 5px solid #333;
-    border-radius: 10px; 
-
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+.logo{
+    float: left;
+}
+
 .content h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
     text-align: center;
 }
 
-.content p {
+.box p {
     margin-bottom: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
-ul {
+.STEAMFaire {
     margin-left: 20px;
     padding-left: 20px;
-}
-
-ul li {
     list-style-type: square;
     margin-bottom: 8px;
 }
@@ -45,15 +48,15 @@ ul li {
     color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .content .box {
     padding: 15px;
-    border-radius: 15px; /* Rounded corners */
-    margin-bottom: 20px; /* Space between each box */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
     font-family: Arial, sans-serif;
-    width: 60%; /* Set smaller width for the boxes */
-    margin: 0 auto; /* Center the boxes */
+    width: 60%;
+    margin: 0 auto; 
 }
