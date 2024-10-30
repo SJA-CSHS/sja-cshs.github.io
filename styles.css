@@ -1,3 +1,4 @@
+/*specific class name*/
 body{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -5,16 +6,20 @@ body{
     background-color: #2e522f;
 }
 
-.header {
-    background-color: #ebe8e7;
-    padding: 20px; /* Space around the text */
-    text-align: center; /* Center the text */ 
-}
-
 .header h1 {
-    font-size: 2.5em;
+    font-size: 1.7em;
+    text-align: center; 
+    color: white;
 }
 
+.box-header{
+    
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #333;
+    border-radius: 10px; 
+
+}
 .content h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
@@ -36,7 +41,6 @@ ul li {
     margin-bottom: 8px;
 }
 
-/*  Border and padding around the content section */
 .content { 
     color: white;
     padding: 20px;
