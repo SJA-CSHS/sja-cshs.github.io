@@ -1,10 +1,26 @@
-@import url('./global.css');
+:root{
+    --primary: #2e522f;
+    --primary-light: #4a6f4d;
+    --primary-dark: #1c3a1b;
+
+    --secondary: #0068fa;
+    --secondary-light: #4d9dff;
+    --secondary-dark: #0046c8;
+
+    --background: #ebe8e7;
+
+    --gray: #ececec;
+}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     padding: 20px;
     background-color: var(--primary);
+}
+
+.portrait {
+    width: 50px;
 }
 
 .header h1 {
